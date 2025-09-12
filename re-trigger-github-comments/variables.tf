@@ -1,8 +1,4 @@
-variable "force_fail" {
+variable "fail_demo" {
   type    = bool
   default = true
-  validation {
-    condition     = var.force_fail == false
-    error_message = "Forced failure for demo."
-  }
 }
