@@ -9,8 +9,6 @@ resource "random_pet" "demo" {
   }
 }
 
-output "pet_name" {
+output "pet_name" {forcefail
   value = random_pet.demo.id
 }
-
-1
