@@ -1,4 +1,4 @@
-variable "fail_demo" {
-  type    = bool
-  default = true
-}
+# variable "fail_demo" {
+#   type    = bool
+#   default = true
+# }
