@@ -1,6 +1,6 @@
 provider "kubernetes" {
   host                   = "https://example.invalid"
-  token                  = "null"
+  token                  = "fake"
   insecure               = true
-  config_context_cluster = "null"
+  config_context_cluster = "fake"
 }
