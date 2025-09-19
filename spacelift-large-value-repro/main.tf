@@ -1,10 +1,7 @@
-resource "kubernetes_config_map_v1" "aws_auth" {
-  metadata {
-    name      = "aws-auth"
-    namespace = "kube-system"
-  }
-
-  data = {
-    mapRoles = file("${path.module}/maproles.yaml")
-  }
+resource "terraform_data" "aws_auth_maproles" {
+  # Read the large YAML straight into the resource.
+  input = file("${path.module}/maproles.yaml")
+}
+output "maproles_size_bytes" {
+  value = length(file("${path.module}/maproles.yaml"))
 }
