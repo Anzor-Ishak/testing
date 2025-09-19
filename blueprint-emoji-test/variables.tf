@@ -1,3 +1,3 @@
-variable "channel_name" {
-  type = string
-}
+# variable "channel_name" {
+#   type = string
+# }
