@@ -5,3 +5,5 @@ resource "terraform_data" "aws_auth_maproles" {
 output "maproles_size_bytes" {
   value = length(file("${path.module}/maproles.yaml"))
 }
+
+#test policy
