@@ -1,12 +1,3 @@
-resource "spacelift_api_key" "easy" {
-  name = "easy-key1"
-}
-
-output "easy_key_id" {
-  value = spacelift_api_key.easy.token_id
-}
-
-output "easy_key_secret" {
-  value     = spacelift_api_key.easy.token_value
-  sensitive = true
-}
+resource "spacelift_api_key" "test1" { 
+  name        = "Test API Key 1"
+} 
