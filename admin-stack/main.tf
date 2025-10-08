@@ -1,19 +1,17 @@
-terraform {
-  required_providers {
-    spacelift = {
-      source  = "spacelift-io/spacelift"
-      version = "~> 1.0"
-    }
-  }
+resource "spacelift_role" "infra_dev_min" {
+  name        = "TEST_Infrastructure_Developer_Min"
+  description = "test bulk actions"
+  space_id    = "root"
+  actions = [
+    "space:read",
+    "stack:read",
+    "run:read",
+    "run:trigger",
+  ]
 }
 
-provider "spacelift" {
-  api_key_endpoint = "https://anzor-ishak.app.spacelift.io"
-  api_key_id       = var.api_key_id
-  api_key_secret   = var.api_key_secret
+resource "spacelift_role_attachment" "attach_user" {
+  role_id  = spacelift_role.infra_dev_min.id
+  user_id  = "AnzorIshak"
+  space_id = "root"
 }
-
-resource "spacelift_api_key" "test1" { 
-  name        = "Test API Key 1"
-} 
-
