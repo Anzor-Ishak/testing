@@ -43,7 +43,7 @@ resource "spacelift_role" "infra_dev_min" {
 
 resource "spacelift_role_attachment" "attach_user" {
   role_id  = spacelift_role.infra_dev_min.id
-  user_id  = "AnzorIshak"
+  user_id  = "01JT99BE7EQAM6GANGT9A1T208"
   space_id = "root"
 }
 
