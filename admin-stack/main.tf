@@ -1,7 +1,6 @@
 resource "spacelift_role" "infra_dev_min" {
   name        = "TEST_Infrastructure_Developer_Min"
   description = "test bulk actions"
-  space_id    = "root"
   actions = [
     "space:read",
     "stack:read",
@@ -15,3 +14,5 @@ resource "spacelift_role_attachment" "attach_user" {
   user_id  = "AnzorIshak"
   space_id = "root"
 }
+
+
