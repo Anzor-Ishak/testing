@@ -1,11 +1,11 @@
-# terraform {
-#   required_providers {
-#     spacelift = {
-#       source  = "spacelift-io/spacelift"
-#       version = "~> 1.0"
-#     }
-#   }
-# }
+terraform {
+  required_providers {
+    spacelift = {
+      source  = "spacelift-io/spacelift"
+      version = "~> 1.0"
+    }
+  }
+}
 
 # provider "spacelift" {
 #   api_key_endpoint = "https://anzor-ishak.app.spacelift.io"
