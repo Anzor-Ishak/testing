@@ -1,7 +1,12 @@
-resource "spacelift_api_key" "automation_key" {
-  name        = "ci-bot-production"
-  description = "Key for CI in production"
+resource "spacelift_api_key" "easy" {
+  name = "easy-key"
 }
 
-output "api_key_id"     { value = spacelift_api_key.automation_key.id }
-output "api_key_secret" { value = spacelift_api_key.automation_key.secret, sensitive = true }
+output "easy_key_id" {
+  value = spacelift_api_key.easy.token_id
+}
+
+output "easy_key_secret" {
+  value     = spacelift_api_key.easy.token_value
+  sensitive = true
+}
