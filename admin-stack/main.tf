@@ -1,5 +1,5 @@
 resource "spacelift_api_key" "easy" {
-  name = "easy-key"
+  name = "easy-key1"
 }
 
 output "easy_key_id" {
