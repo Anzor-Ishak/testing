@@ -5,14 +5,16 @@ stack "repro-terragrunt-show-fail" {
   terragrunt_version       = "0.83.2"
   terraform_workflow_tool  = "OPEN_TOFU"  # use OpenTofu
   project_root             = "."          # repo root; modules are discovered by terragrunt run-all
+  
+environment = {
+  AWS_EC2_METADATA_DISABLED = "true"
+  TG_DOWNLOAD_DIR           = "/tmp/.terragrunt_cache/downloads"
+  TG_LOG_LEVEL              = "info"
+  TG_PROVIDER_CACHE         = "1"
+  TG_PROVIDER_CACHE_DIR     = "/tmp/.terragrunt_cache/providers"
+  TG_TF_PATH                = "tofu"            # <-- add this
+}
 
-  environment = {
-    AWS_EC2_METADATA_DISABLED = "true"
-    TG_DOWNLOAD_DIR           = "/tmp/.terragrunt_cache/downloads"
-    TG_LOG_LEVEL              = "info"
-    TG_PROVIDER_CACHE         = "1"
-    TG_PROVIDER_CACHE_DIR     = "/tmp/.terragrunt_cache/providers"
-  }
 
   terragrunt {
     use_run_all             = true
