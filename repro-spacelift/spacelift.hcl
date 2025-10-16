@@ -5,7 +5,7 @@ stack "repro-terragrunt-show-fail" {
   terragrunt_version       = "0.83.2"
   terraform_workflow_tool  = "OPEN_TOFU"  # use OpenTofu
   project_root             = "."          # repo root; modules are discovered by terragrunt run-all
-  
+
 environment = {
   AWS_EC2_METADATA_DISABLED = "true"
   TG_DOWNLOAD_DIR           = "/tmp/.terragrunt_cache/downloads"
@@ -45,3 +45,4 @@ environment = {
   # add a cosmetic echo. The actual error line will still be emitted by Spacelift’s show step.
   # after_plan += [ "echo '[01K7N277CRMM7F1A6KAKEFPMCG] repro marker: plan file removed'" ]
 }
+#test
