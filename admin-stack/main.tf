@@ -38,7 +38,12 @@ resource "spacelift_role" "infra_dev_min" {
       "STACK_UNLOCK",
       "STACK_UNLOCK_FORCE",
       "STACK_UPLOAD_LOCAL_WORKSPACE",
-      "TASK_CREATE"
+      "TASK_CREATE",
+      "MODULE_CREATE",
+      "MODULE_DISABLE",
+      "MODULE_ENABLE",
+      "MODULE_PUBLISH",
+      "MODULE_TRIGGER_VERSION"
   ]
 }
 
