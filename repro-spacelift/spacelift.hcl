@@ -30,4 +30,4 @@ stack "repro-terragrunt-show-fail" {
     "rm -f spacelift.plan || true",
   ]
 }
-#test3
+#test4
