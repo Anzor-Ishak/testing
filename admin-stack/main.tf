@@ -22,7 +22,6 @@ resource "spacelift_role" "infra_dev_min" {
       "RUN_TARGETED_REPLAN",
       "RUN_TRIGGER",
       "RUN_TRIGGER_WITH_CUSTOM_RUNTIME_CONFIG",
-      "SPACE_WRITE",
       "SPACE_READ",
       "STACK_ADD_CONFIG",
       "STACK_DELETE",
