@@ -3,7 +3,6 @@ resource "spacelift_role" "infra_dev_min" {
   description = "test bulk actions"
   actions = [
       "CONTEXT_CREATE",
-      "CONTEXT_DELETE",
       "CONTEXT_UPDATE",
       "RUN_CANCEL",
       "RUN_CANCEL_BLOCKING",
