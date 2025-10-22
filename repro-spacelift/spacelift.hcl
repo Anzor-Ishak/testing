@@ -19,15 +19,15 @@ stack "repro-terragrunt-show-fail" {
     terragrunt_tool        = "OPEN_TOFU"
   }
 
-  before_init = [
-    "terragrunt --version",
-    "tofu version",
-  ]
-
+#before_init = [
+#    "terragrunt --version",
+#    "tofu version",
+#  ]
+#
   # This is what makes Spacelift's built-in 'show' step fail with exit 1
-  after_plan = [
-    "echo 'Deleting per-module plan in $(pwd)'",
-    "rm -f spacelift.plan || true",
-  ]
-}
+#  after_plan = [
+#    "echo 'Deleting per-module plan in $(pwd)'",
+#    "rm -f spacelift.plan || true",
+#  ]
+#}
 #test5
