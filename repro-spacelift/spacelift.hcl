@@ -1,6 +1,6 @@
 stack "repro-terragrunt-show-fail" {
   terraform_workflow_tool  = "OPEN_TOFU"
-  opentofu_version         = "1.10.6"
+  opentofu_version         = "1.10.5"
   terragrunt_version       = "0.83.2"
   project_root             = "."
 
